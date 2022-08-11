@@ -8,20 +8,23 @@ font-family : 'Roboto', sans-serif;
 .container{
 background: #ECF4FF;
 color: #1C1C1C;
-margin : 64px;
+margin: 32px auto;
 border-radius: 20px;
 box-shadow: 6px 6px 6px #0E1D2F; 
-padding : 64px;
-margin-top : 150px;
+padding : 64px 20px;
+max-width: 1200px;
+min-width: 250px;
 }
 
 .cabecalho{
  display : flex;
- justify-content : space-between; 
+ flex-wrap: wrap;
+ justify-content : space-between;
 }
 
 .perfil{
   display : flex;
+  flex-wrap: wrap;
 }
 
 .perfil-img{
@@ -46,7 +49,7 @@ margin-top : 150px;
 
 .tema button{
  align-self : flex-end;
- font-weigth : 400;
+ font-weight : 400;
  font-size : 24px;
  padding : 8px 16px;
  background: #ECF4FF;
@@ -54,11 +57,23 @@ margin-top : 150px;
  border: 2px solid #0E1D2F;
 }
 
+@media(max-width: 910px){
+
+  .cabecalho{
+    flex-direction: column-reverse;
+  }
+
+  .tema{
+    margin-bottom: 30px;
+    align-self: flex-end;
+  }
+}
+
 .projetos{
   background: linear-gradient(230.65deg, #499CFE 27.49%, #9CC8FC 83.19%);
   display : flex;
   flex-direction : column;
-  padding : 32px;
+  padding : 32px 32px 32px 0px;
   margin-top : 32px;
   border-radius : 20px;
   box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
